@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Webpage with Hidden Simulator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url("{{ url_for('static', filename='images/bg.jpg') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Header with Parallax Effect */
+    header {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?universe,space') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Section for Information */
+    section {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #f3f3f3;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      width: 80%;
+      max-width: 900px;
+      text-align: center;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* iFrame styling */
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    /* Footer with call to action */
+    footer {
+      background: #121212;
+      padding: 40px 20px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    footer p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    footer .social-icons {
+      margin-top: 10px;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #ff5252;
+    }
+
+    /* Advanced feature: floating action button */
+    .floating-action {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #4caf50;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-action:hover {
+      background-color: #388e3c;
+    }
+
+    .floating-action i {
+      pointer-events: none;
+    }
+
+    /* Animation on scroll */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      footer .social-icons a {
+        font-size: 1.2rem;
+      }
+
+      iframe {
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header with Parallax Effect -->
+<header>
+  <div>
+    <h1>Explore the Universe</h1>
+    <p>Discover the wonders of physics through simulations</p>
+  </div>
+</header>
+
+<!-- iFrame for Newton Universe Simulator -->
+<section id="simulatorSection">
+  <h2>Newton Universe Simulator</h2>
+  <p>Explore celestial mechanics and the laws of physics through the interactive Newton Universe Simulator below:</p>
+
+  <!-- Embedded iFrame -->
+  <iframe src="https://newton-universe-simulator.vercel.app/" allowfullscreen></iframe>
+</section>
+
+<!-- Footer Section -->
+
+
+<!-- Floating Action Button -->
+<div class="floating-action" id="actionBtn">
+  <i class="fas fa-rocket"></i>
+</div>
+
+<script>
+  // Intersection Observer for animation on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const simulatorSection = document.getElementById('simulatorSection');
+  observer.observe(simulatorSection);
+
+  // Floating Action Button interaction
+  const actionBtn = document.getElementById('actionBtn');
+  actionBtn.addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

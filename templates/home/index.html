@@ -1,0 +1,105 @@
+{% include 'nav/index.html' %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Explorer</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/home.css') }}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='simulations/rotate.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+ 
+
+    <!-- Intro Section -->
+    <section id="home" class="intro-section">
+        <div class="content">
+            
+            <h1 class="special">Explore the Universe of Exoplanets</h1>
+            <p class="special">Your journey through the galaxy begins here.</p>
+            <a  href="#about" class="cta-button">Learn More</a>
+            <div class="video-container1">
+                <video autoplay muted loop id="background-video">
+                    <source src="{{ url_for('static', filename='simulations/homevid.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We are a dynamic team of six passionate innovators united by our curiosity for space exploration and cutting-edge technology. Our project, Exoplanet Explorer, is our submission for the NASA Space Apps Challenge 2024. As students from Budhanilkantha School, we bring together a diverse set of skills ranging from frontend development and data analysis to astrophysics, machine learning, and game development.
+
+                Our goal is to make space science accessible and exciting for everyone, especially children. Using real-time data from NASA, we are creating an engaging web app that teaches users about exoplanets through interactive lessons, quizzes, and short-form videos. By blending education with entertainment, our project aims to inspire the next generation of space enthusiasts. We believe that learning about the universe should be as fun and addictive as playing a game, and with Exoplanet Explorer, that’s exactly what we aim to achieve.
+                
+                We are excited to collaborate, learn, and innovate at this year’s hackathon!</p>
+        </div>
+    </section>
+
+    <!-- The App Section -->
+    <section id="app" class="app-section">
+        <div class="content">
+            <h2>The Learning App</h2>
+            <p>Our app gives you a hands-on experience, teaching you about distant worlds, their atmospheres, and potential for life. Learn at your own pace, explore new discoveries, and become an exoplanet explorer!</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <div class="alig">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Feel free to get in touch with any questions or feedback.</p>
+    </div>
+   
+    
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="namhe" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Exoplanet Explorer. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>

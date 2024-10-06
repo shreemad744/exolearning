@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body>
+    <div>
+      <a href="/"><span class="material-symbols-outlined">
+        home 
+        </span></a>
+        <a href="/">
+          <p id="ss">Home</p>
+        </a>
+     
+    </div>
+
+
+    <div class="app">
+      <h2 id = "question">1. This is A Random Question.</h1>
+      <div class="quiz">
+        <div id="answer-buttons">
+          <button class="btn">Option1</button>
+          <button class="btn">Option2</button>
+          <button class="btn">Option3</button>
+          <button class="btn">Option4</button>
+        </div>
+        <p id="info-btn">Question 1 of 5</p>
+        <button id="next-btn">Check</button>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+  </body>   
+</html>

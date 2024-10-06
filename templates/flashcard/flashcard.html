@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Flashcards</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_flashcard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Exoplanet Flashcards</h1>
+
+        <!-- Search Filter Section -->
+        <input type="text" id="searchInput" placeholder="Search by topic or question...">
+
+        <!-- Flashcards Section -->
+        <div class="flashcards" id="flashcards">
+            <!-- Exoplanets Discovery Techniques (6 cards) -->
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is the major challenge in directly imaging exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The stars they orbit are millions of times brighter than the planets, making it hard to detect the planets' light.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is coronography?</h3>
+                    </div>
+                    <div class="back">
+                        <p>A technique that uses a device inside a telescope to block a star’s light, allowing astronomers to detect exoplanets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is a starshade?</h3>
+                    </div>
+                    <div class="back">
+                        <p>A separate spacecraft that blocks a star’s light before it reaches a telescope, helping to image exoplanets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How does astrometry help in finding exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>It tracks the wobble of a star caused by a planet’s gravity, observing the star's position changes over time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What makes astrometry a difficult technique to use?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The star’s wobble is tiny and hard to detect, especially for smaller planets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanets Discovery Techniques">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How do scientists use reference stars in astrometry?</h3>
+                    </div>
+                    <div class="back">
+                        <p>They compare the position of the target star with nearby reference stars to detect movement caused by exoplanets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Types of Exoplanets (5 cards) -->
+            <div class="flashcard" data-topic="Types of Exoplanets">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What are Hot Jupiters?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Gas giants that orbit very close to their stars, with high surface temperatures and short orbits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Types of Exoplanets">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What are terrestrial exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Earth-sized planets composed of rock, silicate, water, or carbon, with solid or liquid surfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Types of Exoplanets">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What are Super-Earths or Mini-Neptunes?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Planets up to twice the size of Earth with up to 10 times its mass, possibly gas giants or terrestrial planets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Types of Exoplanets">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What are Neptunian exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Planets similar in size to Neptune and Uranus, with mixed interiors and heavy metal cores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Types of Exoplanets">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What are rogue exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Planets that are not gravitationally bound to any star and wander the galaxy alone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Major Exoplanets Found (12 cards) -->
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What was the first exoplanet discovered around a sun-like star?</h3>
+                    </div>
+                    <div class="back">
+                        <p>51 Pegasi b (Dimidium), discovered in 1995.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What type of exoplanet is 51 Pegasi b?</h3>
+                    </div>
+                    <div class="back">
+                        <p>A Hot Jupiter.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How far is 51 Pegasi b from Earth?</h3>
+                    </div>
+                    <div class="back">
+                        <p>About 50 light-years away.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is significant about Kepler-22b’s location in its star system?</h3>
+                    </div>
+                    <div class="back">
+                        <p>It was the first exoplanet found in its star’s habitable zone.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How far is Kepler-22b from Earth?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Over 600 light-years away.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is the estimated surface temperature of Kepler-22b?</h3>
+                    </div>
+                    <div class="back">
+                        <p>72°F (22°C).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>Which exoplanet is the closest known to Earth?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Proxima Centauri b.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How far away is Proxima Centauri b from Earth?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Just over 4 light-years away.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>Which exoplanet is believed to have oceans of water beneath a thick ice shell?</h3>
+                    </div>
+                    <div class="back">
+                        <p>GJ 1214 b.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What exoplanet is known for being an ultrahot Jupiter with incredibly high winds?</h3>
+                    </div>
+                    <div class="back">
+                        <p>KELT-9b.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is KELT-9b's surface temperature?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Around 7,800°F (4,300°C).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Major Exoplanets Found">
+                <div class="inner">
+                    <div class="front">
+                        <h3>Which system has the most planets discovered?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The TRAPPIST-1 system, with 7 planets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habitable Zones (4 cards) -->
+            <div class="flashcard" data-topic="Habitable Zones">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is the habitable zone?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The region around a star where conditions might allow liquid water to exist on a planet’s surface.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Habitable Zones">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is the habitable zone also known as?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The "Goldilocks zone."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Habitable Zones">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is unique about the habitable zones around red dwarf stars?</h3>
+                    </div>
+                    <div class="back">
+                        <p>They are much closer to the star because red dwarfs emit less heat than larger stars.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Habitable Zones">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What affects the size of a star’s habitable zone?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The size and temperature of the star.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Planetary Atmospheres (5 cards) -->
+            <div class="flashcard" data-topic="Planetary Atmospheres">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What gases are typically found in the atmospheres of exoplanets?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Hydrogen, helium, methane, and carbon dioxide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Planetary Atmospheres">
+                <div class="inner">
+                    <div class="front">
+                        <h3>Why is the study of exoplanet atmospheres important?</h3>
+                    </div>
+                    <div class="back">
+                        <p>It provides clues about the planet’s composition and potential habitability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Planetary Atmospheres">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What method is often used to study exoplanet atmospheres?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Transit spectroscopy, analyzing the light that passes through the planet’s atmosphere during a transit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Planetary Atmospheres">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What can scientists learn by studying the color of an exoplanet?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The composition of its atmosphere and surface.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Planetary Atmospheres">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What have been some of the biggest surprises when studying exoplanet atmospheres?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The discovery of super-Earths with thick atmospheres and unexpected chemical compositions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exoplanetary Missions (4 cards) -->
+            <div class="flashcard" data-topic="Exoplanetary Missions">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What was the primary mission of the Kepler Space Telescope?</h3>
+                    </div>
+                    <div class="back">
+                        <p>To discover Earth-like exoplanets in the habitable zones of their stars.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanetary Missions">
+                <div class="inner">
+                    <div class="front">
+                        <h3>How many exoplanets did the Kepler mission confirm?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Over 2,600 exoplanets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanetary Missions">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is TESS?</h3>
+                    </div>
+                    <div class="back">
+                        <p>The Transiting Exoplanet Survey Satellite, a mission designed to discover exoplanets orbiting nearby stars.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard" data-topic="Exoplanetary Missions">
+                <div class="inner">
+                    <div class="front">
+                        <h3>What is the James Webb Space Telescope’s role in exoplanet discovery?</h3>
+                    </div>
+                    <div class="back">
+                        <p>It is expected to study exoplanet atmospheres and search for signs of habitability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script_flashcard.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Body and theme colors */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  
+  .bg-lightblue {
+    background-color: #8ecae6 !important;
+  }
+  
+  .hero-section {
+    background: #219ebc;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: #023047;
+    border-color: #023047;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #8ecae6;
+    padding: 15px 0;
+  }
+  
+  /* Card hover effect */
+  .card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .social-icons a {
+    font-size: 24px;
+  }
